@@ -15,9 +15,10 @@ https://www.odoo.com/documentation/14.0/setup/install.html#linux
 
 (But with few others steps)  
   
-The final project:  
+**The final project:**  
 http://34.123.115.182:8069/  
-      
+.      
+  
 **1. CREATE A GOOGLE CLOUD PLATFORM ACCOUNT**  
 First things first. Create yourself a Google Cloud Platform (GCP) account. This video will walk you through the process of setting up your GCP account if you don’t already have one  
   
