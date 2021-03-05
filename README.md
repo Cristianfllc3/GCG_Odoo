@@ -147,18 +147,12 @@ Go to Compute Engine -> VM instances -> External IP (and clicked remenber put th
 
 **Info:**  
 When you clicked on the external IP aotomaticaly redirecto to a https, delete the s  
-http://your-external-ip:8069  
+http://your-external-ip:8069     
 
+![image](https://user-images.githubusercontent.com/72107370/110049842-a83e1b00-7d20-11eb-8a49-2921156dca2e.png)  
+  
+![image](https://user-images.githubusercontent.com/72107370/110049896-c0159f00-7d20-11eb-8338-28abab5fea32.png)  
+  
         
 **FIN**  
-  
-(They lived happily ever after ...)  
 
-![image](https://user-images.githubusercontent.com/72107370/110049842-a83e1b00-7d20-11eb-8a49-2921156dca2e.png)
-
-![image](https://user-images.githubusercontent.com/72107370/110049896-c0159f00-7d20-11eb-8338-28abab5fea32.png)
-
-
-Example:  
-http://34.123.115.182:8069
-  
