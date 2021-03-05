@@ -1,19 +1,23 @@
 # GCG_Odoo
-How to Host a Free Odoo on Google Cloud Platform 
 
-# GCG_Wordpress
-
-**HOW TO HOST A FREE WEBSITE ON GOOGLE CLOUD PLATFORM**
+**HOW TO HOST A FREE ODOO ERP ON GOOGLE CLOUD PLATFORM**
 (without/with domain)  
 ---------------------------------------------------------------------------    
 Based on:   
-- https://www.youtube.com/watch?v=f56PG7QxjFI  
-- https://tonyteaches.tech/google-cloud-free-website-hosting-tutorial/  
-(But with few others steps)  
+- "Setting up Odoo server on Ubuntu Google Cloud (2020)"  
+https://www.youtube.com/watch?v=UAamkipG8R8  
+  
+- "INSTALACIÓN DE ODOO EN GOOGLE CLOUD"  
+https://www.youtube.com/watch?v=S_QIHFpr37I  
 
-The final project:
-http://35.222.237.117/
-    
+- Odoo documentation   
+https://www.odoo.com/documentation/14.0/setup/install.html#linux  
+
+(But with few others steps)  
+  
+The final project:  
+http://34.123.115.182:8069/  
+      
 **1. CREATE A GOOGLE CLOUD PLATFORM ACCOUNT**  
 First things first. Create yourself a Google Cloud Platform (GCP) account. This video will walk you through the process of setting up your GCP account if you don’t already have one  
   
@@ -47,8 +51,6 @@ Feel free to choose any operating systems for the boot disk. I chose Ubuntu 20.0
 You can optionally associate a domain name with your IP address. If you don’t have a domain name, feel free to skip ahead to the next step.  
 
 Otherwise, you can use create a DNS A record at your domain registrar with a value of the IP address of your Google Cloud Platform VM instance.  
-
-(*I use this) In Google Domains, for example, you can add the DNS A records for your domain name. The screenshot assumes the IP address of your VM instance is 35.222.110.###.  
 
 **Info**:   
 It is possible purchase a domain for less than 3 o 12 $, I put a few web sites for buy a domain, if you want, but if you are watching this you don't need this :)    
@@ -84,7 +86,7 @@ Odoo needs a PostgreSQL server to run properly. The default configuration for th
 - $ sudo apt install postgresql -y  
 
 **Warning**  
-wkhtmltopdf is not installed through pip and must be installed manually in version 0.12.5 for it to support headers and footers. See our wiki for more details on the various versions.  
+wkhtmltopdf is not installed through pip and must be installed manually in version 0.12.5 for it to support headers and footers. So we did it ...
   
 - sudo apt-get install wkhtmltopdf  
    
@@ -131,7 +133,7 @@ Source filters -> Protocols and ports
 Change to "All"   
   
   
-**PORT LISTEN AND TEST**  
+**LISTEN AND TEST**  
 
 - sudo apt install net-tools  
 - netstat -plntu  
