@@ -151,10 +151,12 @@ http://your-external-ip:8069
 
 ![image](https://user-images.githubusercontent.com/72107370/110049842-a83e1b00-7d20-11eb-8a49-2921156dca2e.png)  
 
-PLUS: How to config a nginx to point to port 80 (https://github.com/bithabib/nginx_setup_in_odoo/tree/main)
+
   
 ![image](https://user-images.githubusercontent.com/72107370/110049896-c0159f00-7d20-11eb-8338-28abab5fea32.png)  
   
-        
+PLUS: How to config a nginx to point to port 80 (https://github.com/bithabib/nginx_setup_in_odoo/tree/main)  
+
+
 **FIN**  
 
