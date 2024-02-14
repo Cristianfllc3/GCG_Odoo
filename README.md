@@ -102,7 +102,7 @@ Test wkhtmltopdf
 **REPOSITORY** (Option 1)  
 Odoo S.A. provides a repository that can be used with Debian and Ubuntu distributions. It can be used to install Odoo Community Edition by   executing the following commands as root:  
 - wget -O - https://nightly.odoo.com/odoo.key | apt-key add -  
-- echo "deb http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list  
+- echo "deb http://nightly.odoo.com/17.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list  
 - apt-get update && apt-get install odoo  
 
 You can then use the usual apt-get upgrade command to keep your installation up-to-date.  
@@ -150,6 +150,8 @@ When you clicked on the external IP aotomaticaly redirecto to a https, delete th
 http://your-external-ip:8069     
 
 ![image](https://user-images.githubusercontent.com/72107370/110049842-a83e1b00-7d20-11eb-8a49-2921156dca2e.png)  
+
+PLUS: How to config a nginx to point to port 80 (https://github.com/bithabib/nginx_setup_in_odoo/tree/main)
   
 ![image](https://user-images.githubusercontent.com/72107370/110049896-c0159f00-7d20-11eb-8338-28abab5fea32.png)  
   
