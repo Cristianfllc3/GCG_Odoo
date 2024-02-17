@@ -16,7 +16,8 @@ https://www.odoo.com/documentation/14.0/setup/install.html#linux
 (But with few others steps)  
   
 **The final project:**  
-http://34.123.115.182:8069/  
+https://rociosil.com  
+https://proyectomaya.com
 .      
   
 **1. CREATE A GOOGLE CLOUD PLATFORM ACCOUNT**  
