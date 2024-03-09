@@ -1,0 +1,42 @@
+<VirtualHost 127.0.0.1:443 _default_:443>
+  ServerName paverhoy.com
+  ServerAlias *
+  SSLEngine on
+  SSLCertificateFile "/opt/bitnami/apache/conf/paverhoy.com.crt"
+  SSLCertificateKeyFile "/opt/bitnami/apache/conf/paverhoy.com.key"
+
+  ProxyPass / http://127.0.0.1:8069/
+  ProxyPassReverse / http://127.0.0.1:8069/
+
+  # Facilitating WebSocket upgrades
+  RewriteEngine On
+  RewriteCond %{HTTP:Upgrade} =websocket [NC]
+  RewriteRule /(.*)           ws://127.0.0.1:8072/$1 [P,L]
+ # RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+ # RewriteRule /(.*)           http://127.0.0.1:8072/$1 [P,L]
+
+
+  # BEGIN: Configuration for letsencrypt
+  Include "/opt/bitnami/apps/letsencrypt/conf/httpd-prefix.conf"
+  # END: Configuration for letsencrypt
+  # BEGIN: Support domain renewal when using mod_proxy without Location
+  <IfModule mod_proxy.c>
+    ProxyPass /.well-known !
+  </IfModule>
+  # END: Support domain renewal when using mod_proxy without Location
+  # BEGIN: Support domain renewal when using mod_proxy within Location
+  <Location /.well-known>
+    <IfModule mod_proxy.c>
+      ProxyPass !
+    </IfModule>
+  </Location>
+  # END: Support domain renewal when using mod_proxy within Location
+  # BEGIN: Enable www to non-www redirection
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteCond %{HTTP_HOST} !^localhost
+  RewriteCond %{HTTP_HOST} !^[0-9]+.[0-9]+.[0-9]+.[0-9]+(:[0-9]+)?$
+  RewriteCond %{REQUEST_URI} !^/\.well-known
+  RewriteRule ^(.*)$ https://%1$1 [R=permanent,L]
+  # END: Enable www to non-www redirection
+</VirtualHost>
