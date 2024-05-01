@@ -2,8 +2,8 @@
   ServerName paverhoy.com
   ServerAlias *
   SSLEngine on
-  SSLCertificateFile "/opt/bitnami/apache/conf/paverhoy.com.crt"
-  SSLCertificateKeyFile "/opt/bitnami/apache/conf/paverhoy.com.key"
+  SSLCertificateFile "/opt/bitnami/apache/conf/yoursite.com.crt"
+  SSLCertificateKeyFile "/opt/bitnami/apache/conf/yoursite.com.key"
 
   ProxyPass / http://127.0.0.1:8069/
   ProxyPassReverse / http://127.0.0.1:8069/
