@@ -1,3 +1,6 @@
+Change the data of file
+/opt/bitnami/apache2/conf/vhosts/odoo-https-vhost.conf
+
 <VirtualHost 127.0.0.1:443 _default_:443>
   ServerName paverhoy.com
   ServerAlias *
